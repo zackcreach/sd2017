@@ -6,7 +6,7 @@ import styled, { css } from 'emotion';
 
 import Header from '../layouts/header';
 
-class About extends React.Component {
+class Resume extends React.Component {
   state = {
     width: null
   }
@@ -35,7 +35,7 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default Resume;
 
 const container = css`
   

@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
 import '../styles/styles.scss';
 import styled, { css } from 'emotion';
@@ -7,7 +7,7 @@ import styled, { css } from 'emotion';
 import Logo from '../components/logo';
 import Navigation from '../components/navigation'
 
-export default () => (
+const Index = () => (
   <div className={index}>
     <div className={logo__container}>
       <Logo />
@@ -17,6 +17,8 @@ export default () => (
     </div>
   </div>
 )
+
+export default Index;
 
 const flex = css`
   display: flex;

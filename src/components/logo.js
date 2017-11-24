@@ -5,11 +5,13 @@ import Navigation from '../components/navigation'
 import '../styles/styles.scss';
 import styled, { css } from 'emotion';
 
-export default () => (
+const Logo = () => (
   <Link to="/">
     <h1 className={logo}>Skylar Denney</h1>
   </Link>
 )
+
+export default Logo;
 
 const logo = css`
   font-family: 'Lobster', Georgia, serif;

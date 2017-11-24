@@ -7,8 +7,8 @@ import styled, { css } from 'emotion';
 import Logo from '../components/logo'
 import Navigation from '../components/navigation'
 
-export default (props) => (
-  <div className={header} style={{width: props.headerWidth}}>
+const Header = ({ headerWidth }) => (
+  <div className={header} style={{width: headerWidth}}>
     <div className={logo__container}>
       <Logo />
     </div>
@@ -17,6 +17,8 @@ export default (props) => (
     </div>
   </div>
 )
+
+export default Header;
 
 const header = css`
   position: fixed;

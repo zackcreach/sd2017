@@ -7,30 +7,16 @@ import { next, back } from '../helpers/carousel';
 import '../styles/styles.scss';
 import styled, { css } from 'emotion';
 
-export default class Viewer extends React.Component {
-  constructor() {
-    super()
-  }
-  render() {
-    return (
-      <div className={viewer}>
-        {next()}
-        {back()}
-        {/* <Img sizes={this.props.data.image1.sizes} /> */}
-      </div>
-    )
-  }
-}
+const Viewer = ({ imageData }) => (
+  <div className={viewer}>
+    {next()}
+    {back()}
+    {console.log(imageData)}
+    <Img sizes={imageData.first.sizes} />
+  </div>
+)
 
-export const query = graphql`
-  query HeadshotImages {
-    image1: imageSharp(id: { regex: "/FNL_Skylar-1020(WEB).jpg/" }) {
-      sizes(maxWidth: 700) {
-        ...GatsbyImageSharpSizes
-      }
-    }      
-  }
-`
+export default Viewer;
 
 const viewer = css`
   height: 100%;

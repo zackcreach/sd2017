@@ -30,7 +30,7 @@ class IndexLayout extends React.Component {
             {this.children()}
           </section>
           <section className={right}>
-            <Viewer/>
+            <Viewer imageData={this.props.data} />
           </section>
         </div>
       </div>
@@ -38,23 +38,33 @@ class IndexLayout extends React.Component {
   }
 }
 
+export default IndexLayout;
+
 IndexLayout.propTypes = {
   children: PropTypes.func,
 }
+
+export const query = graphql`
+  query HeadshotImages {
+    first: imageSharp(id: { regex: "/1020/" }) {
+      sizes(maxWidth: 600) {
+        ...GatsbyImageSharpSizes
+      }
+    }      
+  }
+`
 
 const flex = css`
   display: flex;
   justify-content: center;
   align-items: center;
 `
-
 const outer = css`
   ${flex};
   flex-direction: column;
   background: var(--turq);
   height: 100vh;
 `
-
 const inner = css`
   display: flex;
   height: 100%;
@@ -63,7 +73,6 @@ const inner = css`
   max-height: 600px;
   box-shadow: 6px 6px 40px rgba(100, 100, 100, .5);
 `
-
 const left = css`
   width: 60%;
   padding: 0 40px 0 40px;
@@ -73,6 +82,3 @@ const left = css`
 const right = css`
   width: 40%;
 `
-
-
-export default IndexLayout
