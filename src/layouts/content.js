@@ -4,9 +4,9 @@ import Link from 'gatsby-link';
 import '../styles/styles.scss';
 import styled, { css } from 'emotion';
 
-const Content = (props) => (
+const Content = ({ children }) => (
   <div className={content}>
-    {props.children};
+    {children}
   </div>
 )
 

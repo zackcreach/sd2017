@@ -6,24 +6,39 @@ import styled, { css } from 'emotion';
 
 import Header from '../layouts/header';
 import Content from '../layouts/content';
+import Transition from '../components/transition';
 
 class Demo extends React.Component {
   state = {
-    width: null
+    width: null,
+    in: true
   }
   componentDidMount() {
     this.setState({
       width: this.container.offsetWidth
     })
   }
+  componentWillUnmount() {
+    this.setState({
+      in: false
+    })
+  }
   render() {
     return (
-      <div ref={node => this.container = node}>
+      <section>
         <Header headerWidth={this.state.width} />
-        <Content>
-          <h2>Demo</h2>
-        </Content>
-      </div>  
+        <Transition 
+          timeout={300}
+          classNames='swoop'
+          shouldShow={this.state.in}
+        >
+          <div ref={node => this.container = node}>
+            <Content>
+              <h2>Demo</h2>
+            </Content>
+          </div>  
+        </Transition>
+      </section>
     )
   }
 }

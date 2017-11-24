@@ -5,20 +5,39 @@ import '../styles/styles.scss';
 import styled, { css } from 'emotion';
 
 import Logo from '../components/logo';
-import Navigation from '../components/navigation'
+import Navigation from '../components/navigation';
+import Transition from '../components/transition';
 
-const Index = () => (
-  <div className={index}>
-    <div className={logo__container}>
-      <Logo />
-    </div>
-    <div className={navigation__container}>
-      <Navigation dots />
-    </div>
-  </div>
-)
+class IndexPage extends React.Component {
+  state = {
+    in: true
+  }
+  componentWillUnmount() {
+    this.setState({
+      in: false
+    })
+  }
+  render() {
+    return (
+      <Transition 
+        timeout={300}
+        classNames='swoop'
+        shouldShow={this.state.in}
+      >
+        <div className={index}>
+          <div className={logo__container}>
+            <Logo />
+          </div>
+          <div className={navigation__container}>
+            <Navigation dots />
+          </div>
+        </div>
+      </Transition>
+    )
+  }
+}
 
-export default Index;
+export default IndexPage;
 
 const flex = css`
   display: flex;
