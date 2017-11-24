@@ -43,4 +43,13 @@ const navigation = css`
   & * {
     color: var(--turq);
   }
+
+  & li {
+    transition: all .35s ease;
+  }
+
+  & li:hover {
+    color: var(--turqHover);
+    transform: translateY(-1px);
+  }
 `

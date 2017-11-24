@@ -7,7 +7,7 @@ import styled, { css } from 'emotion';
 
 const Logo = () => (
   <Link to="/">
-    <h1 className={logo}>Skylar Denney</h1>
+    <div className={logo}>Skylar Denney</div>
   </Link>
 )
 
@@ -17,4 +17,10 @@ const logo = css`
   font-family: 'Lobster', Georgia, serif;
   font-style: normal;
   color: var(--turq);
+  transition: all .25s ease;
+
+  &:hover {
+    color: var(--turqHover);
+    transform: translateY(-1px);
+  }
 `

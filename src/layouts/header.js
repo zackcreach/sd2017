@@ -33,7 +33,7 @@ const logo__container = css`
   /* text-shadow: 2px 2px 0px rgba(200, 200, 200,.4); */
 `
 const navigation__container = css`
-  padding: 10px 0 0 0;
+  padding: 12px 0 0 0;
   font-size: 1.2rem;
 
   @media (min-width: 380px) {

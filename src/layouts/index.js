@@ -1,42 +1,35 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import '../styles/styles.scss';
-import ico from '../images/sd.png';
 import styled, { css } from 'emotion';
+
+import ico from '../images/sd.png';
 import Viewer from '../components/viewer';
 
-class IndexLayout extends React.Component {
-  constructor({ children }) {
-    super();
-    this.children = children;
-  }
-  render() {
-    return (
-      <div className={outer}>
-        <div className={inner}>
-          <Helmet>
-            <title>Skylar Denney</title>
-            <meta charset='UTF-8'/>
-            <meta name='description' content='The Portfolio of Skylar Denney'/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <link rel="shortcut icon" href={ico} type="image/x-icon"/>
-            <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-            <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
-          </Helmet>
-          <section className={left}>
-            {this.children()}
-          </section>
-          <section className={right}>
-            <Viewer imageData={this.props.data} />
-          </section>
-        </div>
-      </div>
-    )
-  }
-}
+const IndexLayout = ({ children, data }) => (
+  <div className={outer}>
+    <div className={inner}>
+      <Helmet>
+        <title>Skylar Denney</title>
+        <meta charset='UTF-8'/>
+        <meta name='description' content='The Portfolio of Skylar Denney'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" href={ico} type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
+      </Helmet>
+      <section className={left}>
+        {children()}
+      </section>
+      <section className={right}>
+        <Viewer imageData={data} />
+      </section>
+    </div>
+  </div>
+)
 
 export default IndexLayout;
 
