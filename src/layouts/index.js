@@ -8,7 +8,7 @@ import '../styles/styles.scss';
 import styled, { css } from 'emotion';
 
 import ico from '../images/sd.png';
-import Viewer from '../components/viewer';
+import Viewer from './viewer';
 
 class IndexLayout extends React.Component {
   render() {

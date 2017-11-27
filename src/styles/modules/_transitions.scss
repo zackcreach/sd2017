@@ -15,17 +15,17 @@
 }
 
 .slide-enter {
-  transform: rotate(0deg);
+  transform: translateX(100%);
   &-active {
-    transform: rotate(90deg);
-    transition: transform .3s ease-in;
+    transform: translateX(0);
+    transition: transform 3s ease;
   }
 }
 
 .slide-exit {
-  transform: rotate(90deg);
-  &-active {
-    transform: rotate(0deg);
-    transition: transform .3s ease-out;
+  transform: translateX(100%);
+  &-exit-active {
+    transform: translateX(0);
+    transition: transform 1s ease;
   }
 }
