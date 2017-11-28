@@ -23,36 +23,32 @@ class Viewer extends React.Component {
   renderImage() {
     const { gallery, currentImageIndex, show } = this.state;
     return (
-      // show ? <p key={1}>TRUE</p> : <p key={2}>FALSE</p>
-      <CSSTransition
-        timeout={1000}
-        classNames='slide'
-        in={show}
-        onExited={() => (
-          this.setState({ 
-            currentImageIndex: currentImageIndex === (gallery.length - 1) ? 0 : currentImageIndex + 1,
-            show: !this.state.show
-          })
-        )}
-      >
-        <Img sizes={gallery[currentImageIndex].sizes} key={gallery[currentImageIndex].sizes.src} className={imageStyle} />
-      </CSSTransition>
+      <Img sizes={gallery[currentImageIndex].sizes} key={gallery[currentImageIndex].sizes.src} className={imageStyle} />
     )
-    this.setState({
-      show: false
-    });
-  }
-  changeImage() {
-    const { gallery, currentImageIndex, show } = this.state;
-    this.setState({
-      show: !show,
-    });
   }
   render() {
     const { gallery, currentImageIndex, show } = this.state;
+    console.log(gallery[currentImageIndex].sizes.src);
+    
     return (
-      <div className={viewer} onClick={() => this.changeImage()}>
+      <div className={viewer} onClick={() => {
+        this.setState({
+          show: !this.state.show,
+        });
+      }}>
+        <CSSTransition
+          timeout={1000}
+          classNames='slide'
+          in={show}
+          onExited={() => (
+            this.setState({ 
+              show: !this.state.show,
+              currentImageIndex: currentImageIndex === (gallery.length - 1) ? 0 : currentImageIndex + 1,
+            })
+          )}
+        >
           {this.renderImage()}
+        </CSSTransition>
       </div>
     )
   }
