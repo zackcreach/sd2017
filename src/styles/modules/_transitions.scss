@@ -2,7 +2,7 @@
   opacity: 0;
   &-active {
     opacity: 1;
-    transition: all .3s ease-in;
+    transition: all .3s ease;
   }
 }
 
@@ -10,24 +10,24 @@
   opacity: 1;
   &-active {
     opacity: 0;
-    transition: all .3s ease-out;
+    transition: all .3s ease;
   }
 }
 
 .slide-enter {
-  transform: translateX(100%);
-  transition: all 1s ease;
-
+  opacity: 0;
+  transition: all .8s ease-out;
+  
   &.slide-enter-active {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 .slide-exit {
-  transform: translateX(0);
-  transition: all 1s ease;
+  opacity: 1;
+  transition: all .8s ease-in;
 
   &.slide-exit-active {
-    transform: translateX(-100%);
+    opacity: 0;
   }
 }
