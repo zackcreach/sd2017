@@ -27,11 +27,7 @@ class About extends React.Component {
     return (
       <section>
         <Header headerWidth={this.state.width} />
-        <Transition 
-          timeout={300}
-          classNames='swoop'
-          shouldShow={this.state.in}
-        >
+        <Transition show={this.state.in}>
           <div ref={node => this.container = node}>
             <Content>
               <h2>About</h2>

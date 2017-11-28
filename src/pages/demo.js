@@ -27,14 +27,12 @@ class Demo extends React.Component {
     return (
       <section>
         <Header headerWidth={this.state.width} />
-        <Transition 
-          timeout={300}
-          classNames='swoop'
-          shouldShow={this.state.in}
-        >
+        <Transition show={this.state.in}>
           <div ref={node => this.container = node}>
             <Content>
               <h2>Demo</h2>
+              <span className="instamargin"><iframe width="512" height="288" src="https://www.youtube.com/embed/1DYbD3r2Mvs" frameBorder="0" allowFullScreen></iframe></span>
+              <span className="instamargin"><iframe width="512" height="288" src="https://www.youtube.com/embed/1PAjsbAHoB0" frameBorder="0" allowFullScreen></iframe></span>	
             </Content>
           </div>  
         </Transition>

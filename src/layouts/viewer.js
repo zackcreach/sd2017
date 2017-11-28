@@ -8,7 +8,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import '../styles/styles.scss';
 import styled, { css } from 'emotion';
 
-class Viewer extends React.Component {
+class Viewer extends React.PureComponent {
   constructor({ imageData }) {
     super();
     this.state = {
@@ -18,7 +18,7 @@ class Viewer extends React.Component {
     }
   }
   componentWillMount() {
-    setInterval(() => this.changeImage(), 6000);
+    setInterval(() => this.changeImage(), 7500);
   }
   changeImage() {
     this.setState({

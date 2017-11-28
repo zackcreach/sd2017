@@ -1,12 +1,12 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-const Transition = ({ shouldShow, timeout, classNames, children, ...props }) => (
+const Transition = ({ show, children, ...props }) => (
   <CSSTransition
     {...props}
-    timeout={timeout}
-    classNames={classNames}
-    in={shouldShow}
+    timeout={300}
+    classNames='swoop'
+    in={show}
   >
     {children}
   </CSSTransition>

@@ -19,11 +19,7 @@ class IndexPage extends React.Component {
   }
   render() {
     return (
-      <Transition 
-        timeout={300}
-        classNames='swoop'
-        shouldShow={this.state.in}
-      >
+      <Transition show={this.state.in}>
         <div className={index}>
           <div className={logo__container}>
             <Logo />
