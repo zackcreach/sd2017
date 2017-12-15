@@ -79,12 +79,16 @@ const outer = css`
   height: 100vh;
 `
 const inner = css`
-  display: flex;
-  width: 90%;
-  flex-wrap: wrap;
-  margin: 30px 0 30px 0;
-  box-shadow: 6px 6px 40px rgba(100, 100, 100, .5);
-  overflow: hidden;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+  @media (min-width: 430px) {
+    width: 90%;
+    margin: 30px 0 30px 0;
+    box-shadow: 6px 6px 40px rgba(100, 100, 100, .5);
+  }
   
   @media (min-width: 1200px) {
     display: flex;

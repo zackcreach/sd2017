@@ -31,8 +31,8 @@ class Demo extends React.Component {
           <div ref={node => this.container = node}>
             <Content>
               <h2>Demo</h2>
-              <span className="instamargin"><iframe width="512" height="288" src="https://www.youtube.com/embed/1DYbD3r2Mvs" frameBorder="0" allowFullScreen></iframe></span>
-              <span className="instamargin"><iframe width="512" height="288" src="https://www.youtube.com/embed/1PAjsbAHoB0" frameBorder="0" allowFullScreen></iframe></span>	
+              <iframe className={iframe} src="https://www.youtube.com/embed/1DYbD3r2Mvs" allowFullScreen></iframe>
+              <iframe className={iframe} src="https://www.youtube.com/embed/1PAjsbAHoB0" allowFullScreen></iframe>	
             </Content>
           </div>  
         </Transition>
@@ -42,3 +42,13 @@ class Demo extends React.Component {
 }
 
 export default Demo;
+
+const iframe = css`
+  width: 100%;
+  height: 350px;
+  border: 0;
+
+  &:first-of-type {
+    margin-bottom: 20px;
+  }
+`
