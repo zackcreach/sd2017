@@ -13,5 +13,5 @@ const Content = ({ children }) => (
 export default Content;
 
 const content = css`
-  padding: 110px 0 0 0;
+  padding: 110px 0 40px 0;
 `

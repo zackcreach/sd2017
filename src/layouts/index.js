@@ -80,29 +80,34 @@ const outer = css`
 `
 const inner = css`
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
     overflow: hidden;
-
-  @media (min-width: 430px) {
-    width: 90%;
-    margin: 30px 0 30px 0;
-    box-shadow: 6px 6px 40px rgba(100, 100, 100, .5);
-  }
-  
-  @media (min-width: 1200px) {
-    display: flex;
-    margin: 0;
+    width: 100%;
     height: 100%;
-    width: 1200px;
-    max-height: 600px;
-  }
-`
+    
+    @media (min-width: 430px) {
+      width: 90%;
+      margin: 30px 0 30px 0;
+      box-shadow: 6px 6px 40px rgba(100, 100, 100, .5);
+    }
+    
+    @media (min-width: 1200px) {
+      display: flex;
+      margin: 0;
+      height: 100%;
+      width: 1200px;
+      max-height: 600px;
+    }
+    `
 const left = css`
   overflow: scroll;
   background: white;
-  height: 75vh;
-  padding: 0 40px 0 40px;
+  padding: 0 25px 0 25px;
+  width: 100%;
+  
+  @media (min-width: 430px) {
+    padding: 0 40px 0 40px;
+  }
   
   @media (min-width: 1200px) {
     margin: auto;
@@ -112,10 +117,11 @@ const left = css`
   }
   `
 const right = css`
-  height: 25vh;
+  display: none;
   order: -1;
   
   @media (min-width: 1200px) {
+    display: block;
     order: 0;
     width: 40%;
     height: auto;

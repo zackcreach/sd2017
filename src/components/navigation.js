@@ -11,19 +11,19 @@ const Navigation = ({ dots }) => (
         About
       </Link>
     </li>
-    {dots ? <span>·</span> : ''}
+    {dots ? <span className={dotShow}>·</span> : ''}
     <li>
       <Link to="/resume">
         Resume
       </Link>
     </li>
-    {dots ? <span>·</span> : ''}
+    {dots ? <span className={dotShow}>·</span> : ''}
     <li>
       <Link to="/demo">
         Demo
       </Link>
     </li>
-    {dots ? <span>·</span> : ''}
+    {dots ? <span className={dotShow}>·</span> : ''}
     <li>
       <Link to="/contact">
         Contact
@@ -36,9 +36,15 @@ export default Navigation;
 
 const navigation = css`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
+  width: 220px;
+  
+  @media (min-width: 430px) {
+    justify-content: space-between;
+    width: auto;
+  }
 
   & * {
     color: var(--turq);
@@ -51,5 +57,13 @@ const navigation = css`
   & li:hover {
     color: var(--turqHover);
     transform: translateY(-1px);
+  }
+`
+
+const dotShow = css`
+  display: none;
+  
+  @media (min-width: 430px) {
+    display: inline;
   }
 `

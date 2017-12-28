@@ -31,118 +31,172 @@ class Resume extends React.Component {
           <div ref={node => this.container = node}>
             <Content>
               <h2>Resume</h2>
-              <div className="resume-full">
-						Height: 5’5”<br />
-						Weight: 110lbs<br />
-						Hair: Red<br />
-						Eyes: Blue<br /><br /><br />
-						</div>
+              <div className={row}>
+								<p className={colLeft}>Height: 5’5”</p>
+								<p className={colRight}>Sol Talent</p>
+							</div>
+              <div className={row}>
+								<p className={colLeft}>Weight: 110lbs</p>
+								<p className={colRight}>Tel. 843-882-7560</p>
+							</div>
+              <div className={row}>
+								<p className={colLeft}>Hair: Red</p>
+								<p className={colRight}>info@soltalent.com</p>
+							</div>
+              <div className={row}>
+								<p className={colLeft}>Eyes: Blue</p>
+								<p className={colRight}><a href='http://www.soltalent.com'>soltalent.com</a></p>
+							</div>
 						
-						<div className="resume-full"><h2 className="resumetitle">FILM</h2></div>
+							<h2 className={heading}>TV</h2>
+              <div className={row}>
+								<p className={colLeft}>Insatiable</p>
+								<p className={colMid}>Co-star</p>
+								<p className={colRight}>Netflix / Maggie Kiley</p>
+							</div>
 						
-						<div className="resume-left">
-						Just Imagine<br />
-						Going Together<br />
-						The Attress<br />
-						Man Up<br />
-						Do I?<br />
-						Amoreaux<br />
-						Fade To Bright<br /><br /><br />
-						</div>
+							<h2 className={heading}>Film</h2>
+              <div className={row}>
+								<p className={colLeft}>Godzilla: King of Monsters</p>
+								<p className={colMid}>Featured</p>
+								<p className={colRight}>Legendary Ent./ Michael Dougherty</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Just Imagine</p>
+								<p className={colMid}>Lead</p>
+								<p className={colRight}>Sarah Moss</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Going Together</p>
+								<p className={colMid}>Featured</p>
+								<p className={colRight}>Sophie Webb</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>The Actress</p>
+								<p className={colMid}>Supporting</p>
+								<p className={colRight}>Nell Nakkan</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Man Up</p>
+								<p className={colMid}>Supporting</p>
+								<p className={colRight}>Cyrus Hogg</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Do I?</p>
+								<p className={colMid}>Lead</p>
+								<p className={colRight}>Nell Nakkan</p>
+							</div>
 						
-						<div className="resume-middle">
-						Lead<br />
-						Featured<br />
-						Supporting<br />
-						Supporting<br />
-						Lead<br />
-						Lead<br />
-						Lead
-						</div>
+							<h2 className={heading}>Theater</h2>
+							<div className={row}>
+								<p className={colLeft}>The MANologues</p>
+								<p className={colMid}>Ensemble</p>
+								<p className={colRight}>Switchyards</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>HuMan Up</p>
+								<p className={colMid}>Ensemble</p>
+								<p className={colRight}>The Mammal Gallery</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>The Broken Hearts Club</p>
+								<p className={colMid}>Shannie</p>
+								<p className={colRight}>The Complex</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Suburbia</p>
+								<p className={colMid}>Erica</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Dinner With Friends</p>
+								<p className={colMid}>Karen</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Look Homeward, Angel</p>
+								<p className={colMid}>Helen</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>La Ronde</p>
+								<p className={colMid}>Young Wife</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Doubt: A Parable</p>
+								<p className={colMid}>Sister James</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Arcadia</p>
+								<p className={colMid}>Thomasina</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>The Tempest</p>
+								<p className={colMid}>Miranda</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Major Barbara</p>
+								<p className={colMid}>Jenny</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Five Women Wearing the Same Dress</p>
+								<p className={colMid}>Meredith</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={row}>
+								<p className={colLeft}>Once A Catholic</p>
+								<p className={colMid}>Mary Mooney</p>
+								<p className={colRight}>AADA</p>
+							</div>
+							<div className={rowAstrisk}>
+								<p className={colRight}>*American Academy of Dramatic Arts (AADA)</p>
+							</div>
 						
-						<div className="resume-right">
-						Sarah Moss<br />
-						Sophie Webb<br />
-						Nell Nakkan<br />
-						Cyrus Hogg<br />
-						Nell Nakkan<br />
-						New York Film Academy<br />
-						Chapman University
-						</div>
-
-						<div className="resume-full"><h2 className="resumetitle">THEATER</h2></div>
+							<h2 className={heading}>Training</h2>
+							<div className={row}>
+								<p className={colFull}>iO West – Los Angeles, CA</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}>Ivanna Chubbuck Studio – Los Angeles, CA</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}>UCB Improv – Los Angeles, CA</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}>L.A. On-Camera Training Center – Jamison Haase – Los Angeles, CA</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}><b>The American Academy of Dramatic Arts, Associate of Arts</b> – Los Angeles, CA</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}>Sword Fights, Inc. – Stage Combat, Brian Danner – Los Angeles, CA</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}>Highwire Comedy Improv – Atlanta, GA</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}>Village Theater Improv – Atlanta, GA</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}>Drama Inc. Chubbuck – Atlanta, GA</p>
+							</div>
 						
-						<div className="resume-left">
-						HuMan Up: Voices to Help End Rape Culture<br />
-						The Broken Hearts Club	<br />
-						Suburbia<br />
-						Dinner With Friends<br />
-						Look Homeward, Angel<br />
-						La Ronde<br />
-						Doubt: A Parable<br />
-						Arcadia<br />
-						The Tempest<br />
-						Major Barbara<br />
-						Five Women Wearing the Same Dress	<br />
-						Once A Catholic<br />
-						Southern Girls<br />
-						Playing For Time<br /><br /><br />
-						</div>
+							<h2 className={heading}>Special Skills</h2>
+							<div className={row}>
+								<p className={colFull}>Instruments: Oboe, basic piano</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}>Dialects: Standard British, Cockney, Irish, New York, Southern, Valley Girl</p>
+							</div>
+							<div className={row}>
+								<p className={colFull}>Other: Improv, yoga, rock climbing (bouldering), basic stage combat, basic ballet, eyebrow contortionist</p>
+							</div>
 						
-						<div className="resume-middle">
-						Supporting<br />
-						Shannie<br />
-						Erica<br />
-						Karen<br />
-						Helen<br />
-						Young Wife<br />
-						Sister James<br />
-						Thomasina<br />
-						Miranda<br />
-						Jenny<br />
-						Meredeth<br />
-						Mary Mooney<br />
-						Charlotte<br />
-						Fania Fenelon
-						</div>
-						
-						<div className="resume-right">
-						The Mammal Gallery<br />
-						The Complex<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						American Academy of  Dramatic Arts<br />
-						Morgantown Theater Company<br /><br />
-						</div>
-						
-						<div className="resume-full">
-						<h2 className="resumetitle">TRAINING</h2>
-						Drama Inc. On-Camera Acting – Atlanta, GA<br />
-						Highwhire Comedy Improv – Ryan Stadler - Atlanta, GA<br />
-						Village Theater Improv – Cassidy Russell - Atlanta, GA<br />
-						Drama Inc. Chubbuck – Jerri Tubbs – Atlanta, GA<br />
-						Improv Olympic West – Paul Vaillancourt, Brett Elam, Brian Jack – Los Angeles, CA<br />
-						Ivanna Chubbuck Studio – Deryl Carroll, Frantz Turner – Los Angeles, CA<br />
-						UCB Improv – Allan McLeod, Brian Finkelstein – Los Angeles, CA<br />
-						L.A. On-Camera Training Center – Jamison Haase – Los Angeles, CA<br />
-						The American Academy of Dramatic Arts, Associate of Arts – Los Angeles, CA<br />
-						Sword Fights, Inc. – Stage Combat, Brian Danner – Los Angeles, CA<br /><br /><br />
-						</div>
-						
-						<div className="resume-full">
-						<h2 className="resumetitle">SPECIAL SKILLS</h2>
-						Instruments: Oboe, some Clarinet<br />
-						Dialects: Standard British, Cockney, Irish, New York, Southern, Valley Girl<br />
-						Other: YOGA, improv, baton twirling, basic stage combat, basic ballet, skeet shooting, eyebrow contortionist<br /><br /><br />
-						</div>
             </Content>
           </div>  
         </Transition>
@@ -150,5 +204,56 @@ class Resume extends React.Component {
     )
   }
 }
+
+const heading = css`
+	padding: 45px 0 15px 0;
+`
+
+const row = css`
+	display: flex;
+	justify-content: space-between;
+	font-size: .8rem;
+	padding: 2px;
+	
+	@media (min-width: 430px) {
+		font-size: 1rem;
+	}
+	
+	&:nth-child(2n + 1) {
+		background: rgba(0, 0, 0, .033);
+	}
+`
+
+const rowAstrisk = css`
+	display: flex;
+	justify-content: flex-end;
+`
+
+const col = css`
+	padding: 0;
+`
+
+const colLeft = css`
+	${col};
+	width: 42%;
+	text-align: left;
+	`
+
+const colMid = css`
+	${col};
+	width: 16%;
+	text-align: left;
+`
+
+const colRight = css`
+	${col};
+	width: 42%;
+	text-align: right;
+`
+
+const colFull = css`
+	${col};
+	width: 100%;
+`
 
 export default Resume;

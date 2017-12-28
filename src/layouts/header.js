@@ -24,19 +24,32 @@ const header = css`
   position: fixed;
   display: flex;
   justify-content: space-between;  
+  align-items: center;
   padding: 30px 0 30px 0;
   background: white;
+  
+  @media (min-width: 430px) {
+
+  }
 `
 const logo__container = css`
-  font-size: 3rem;
+  font-size: 1.8rem;
   line-height: .9;
+  width: 30%;
   /* text-shadow: 2px 2px 0px rgba(200, 200, 200,.4); */
+
+  @media (min-width: 430px) {
+    width: auto;
+    font-size: 3rem;
+    line-height: .9;
+  }
 `
 const navigation__container = css`
-  padding: 12px 0 0 0;
-  font-size: 1.2rem;
-
-  @media (min-width: 380px) {
+  font-size: .9rem;
+  
+  @media (min-width: 430px) {
+    font-size: 1.2rem;
     width: 300px;
+    padding: 15px 0 0 0;
   }
 `

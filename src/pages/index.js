@@ -41,25 +41,42 @@ const flex = css`
   align-items: center;
 `
 const index = css`
-  ${flex};
-  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   height: 100%;
+  
+  @media (min-width: 430px) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
 `
 const logo__container = css`
+  margin: 50px 0 50px 0;
   display: flex;
-  font-size: 7rem;
+  font-size: 6rem;
   line-height: .9;
   text-align: center;
   text-shadow: 3px 3px 0px rgba(200, 200, 200,.25);
+
+  @media (min-width: 430px) {
+    padding: 0;
+    font-size: 7rem;
+  }
 `
 const navigation__container = css`
   font-size: 1.5rem;
-
+  height: 50%;
+  
   & > ul {
     flex-direction: column;
+    justify-content: space-around;
   }
-
-  @media (min-width: 380px) {
+  
+  @media (min-width: 430px) {
+    padding: 0;
     width: 350px;
     height: 300px;    
   }
