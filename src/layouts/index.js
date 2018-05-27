@@ -7,7 +7,7 @@ import { TransitionGroup } from 'react-transition-group';
 import '../styles/styles.scss';
 import styled, { css } from 'emotion';
 
-import ico from '../images/sd.png';
+import ico from '../images/favicon.png';
 import Viewer from './viewer';
 
 class IndexLayout extends React.Component {
